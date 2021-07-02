@@ -38,13 +38,13 @@ class zc_TimerView
 
     int    screenWidth  = Screen.GetWidth();
     double ratio        = (_timer.GetCount() - fracTic) / _timer.GetMaxCount();
-    int    middleWidth  = screenWidth / 2;
+    int    middleWidth  = screenWidth;
     int    halfBarWidth = int(round(screenWidth / 8 * ratio));
 
     y += MARGIN;
 
     Screen.DrawThickLine( middleWidth - halfBarWidth, y
-                        , middleWidth + halfBarWidth, y
+                        , middleWidth, y
                         , BAR_THICKNESS, BAR_COLOR
                         );
 

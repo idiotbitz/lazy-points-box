@@ -38,12 +38,12 @@ class zc_TallyView
 
       PlayerInfo player   = players[i];
       String playerString = String.Format("%s: %d", player.GetUserName(), player.mo.score);
-      int    playerWidth  = OriginalSmallFont.StringWidth(playerString) * CleanXFac_1;
-      int    x            = (Screen.GetWidth() - playerWidth) / 2;
-      Screen.DrawText(OriginalSmallFont, Font.CR_Blue, x, y, playerString, DTA_CleanNoMove_1, true);
+      int    playerWidth  = SmallFont.StringWidth(playerString) * CleanXFac_1;
+      int    x            = 0;
+      Screen.DrawText(SmallFont, Font.CR_Blue, x, y, playerString, DTA_CleanNoMove_1, true);
     }
 
-    int lineHeight = OriginalSmallFont.GetHeight() * CleanYFac_1;
+    int lineHeight = SmallFont.GetHeight() * CleanYFac_1;
     return lineHeight;
   }
 

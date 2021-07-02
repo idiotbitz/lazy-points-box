@@ -58,7 +58,7 @@ class zc_BonusView
     }
 
     int bonusWidth = _font.StringWidth(bonusString) * CleanXFac_1;
-    int x          = (Screen.GetWidth() - bonusWidth) / 2;
+    int x          = (Screen.GetWidth() - bonusWidth);
     Screen.DrawText(_font, Font.CR_Blue, x, y, bonusString, DTA_CleanNoMove_1, true);
 
     return lineHeight * 2;

@@ -29,7 +29,7 @@ class zc_Parameters
   /**
    * This font is used for drawing score points and info on bonuses.
    */
-  const FONT = "OriginalBigFont";
+  const FONT = "SmallFont";
 
   /**
    * This is a time in seconds, during which kills provide a bonus.
@@ -39,6 +39,6 @@ class zc_Parameters
   /**
    * This is an offset in pixels from the top of the screen for all score info.
    */
-  const Y_OFFSET = 10;
+  const Y_OFFSET = 24;
 
 } // class zc_Parameters

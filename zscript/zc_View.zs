@@ -47,7 +47,7 @@ class zc_View
 
     String scoreString = String.Format("%d", _interpolator.getValue());
     int    scoreWidth  = _font.StringWidth(scoreString) * CleanXFac_1;
-    int    x           = (Screen.GetWidth() - scoreWidth) / 2;
+    int    x           = (Screen.GetWidth() - scoreWidth);
     Screen.DrawText(_font, Font.CR_Blue, x, y, scoreString, DTA_CleanNoMove_1, true);
 
     return lineHeight * 2;
