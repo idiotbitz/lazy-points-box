@@ -39,11 +39,29 @@ class zc_HealthBonus
   double getMultiplier()
   {
     int healthPercent = _player.health * 100 / _player.mo.GetMaxHealth();
+	int armorPercent = _player.mo.CountInv("BasicArmor") * 100 / 60;
 
-    if      (healthPercent >= 100) return 2.0;
-    else if (healthPercent >=  50) return 1.5;
+	if  (_player.mo is "PlayerCircle")
+	{
+	  if      (healthPercent >= 75) return 2.0;
+      else if (healthPercent >= 50) return 1.5;
 
-    return 1.0;
+      return 1.0;
+	}
+	else if (_player.mo is "PlayerTriangle")
+	{
+	  if      ((((healthPercent * 4) + (armorPercent * 6)) / 10) >= 100) return 2.0;
+      else if ((((healthPercent * 4) + (armorPercent * 6)) / 10) >=  50) return 1.5;
+
+      return 1.0;
+	}
+	else
+	{
+	  if      (healthPercent >= 100) return 2.0;
+      else if (healthPercent >=  50) return 1.5;
+
+      return 1.0;
+	}
   }
 
 // private: ////////////////////////////////////////////////////////////////////
