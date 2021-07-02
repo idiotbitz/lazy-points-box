@@ -1,3 +1,11 @@
+this is just a personal edit of mmaulwurff's cool lazy-points mod so that it is more compatible with "Box Party".
+this version is meant to be used alongside Box Party. if you are not playing Box Party, i recommend you just use the original version of this mod. :)
+see the link below if you wanna learn more about Box Party.
+https://forum.zdoom.org/viewtopic.php?f=19&t=71782
+
+-idiotbitz
+
+original description below:
 # Scoring for GZDoom
 
 Summary: do things, get points!
