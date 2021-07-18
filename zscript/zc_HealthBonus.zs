@@ -41,14 +41,14 @@ class zc_HealthBonus
     int healthPercent = _player.health * 100 / _player.mo.GetMaxHealth();
 	int armorPercent = _player.mo.CountInv("BasicArmor") * 100 / 60;
 
-	if  (_player.mo is "PlayerCircle")
+	if  (_player.mo.FindInventory("PlayerCircleToken"))
 	{
 	  if      (healthPercent >= 75) return 2.0;
       else if (healthPercent >= 50) return 1.5;
 
       return 1.0;
 	}
-	else if (_player.mo is "PlayerTriangle")
+	else if (_player.mo.FindInventory("PlayerTriangleToken"))
 	{
 	  if      ((((healthPercent * 4) + (armorPercent * 6)) / 10) >= 100) return 2.0;
       else if ((((healthPercent * 4) + (armorPercent * 6)) / 10) >=  50) return 1.5;
